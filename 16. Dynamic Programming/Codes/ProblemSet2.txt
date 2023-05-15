@@ -1,0 +1,18 @@
+In bounded kanpsack we were taking decision whether we have to include that element or not, and once we take decision we do not come to that element again
+In unbounded knapsack we though we have taken decision on that element we take decision again. That is multiple occurences of same item are allowed
+Now take a example of icecream consider you are given certain flavours of icecream, if you disalike a flavour, then you won't take that flavoured icecream again
+But when you like a flavour you will definety take that icecream again.
+Hence for a ceratin element you have multiple ccurence to include it or exclude it from the set
+hence if you decide that you do not have to take the element then call on n-1
+and if you want to take element you will condier that element as unprocessed and hence you will take that element,then call on n
+
+1. Unbounded knapsack
+https://www.codingninjas.com/codestudio/problems/unbounded-knapsack_1215029
+
+2. Rod cutting problem
+https://practice.geeksforgeeks.org/problems/rod-cutting0840/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article
+
+3. Coin exchange
+https://practice.geeksforgeeks.org/problems/coin-change2448/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article
+
+4.

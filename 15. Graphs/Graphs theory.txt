@@ -1,0 +1,69 @@
+GRAPH
+1. When we have a graph consisting of n connected components,cycle exits in each component.
+2. BFS algorithm moves tep by step
+where as dfs algorithm moves in depth and hence when we have to find solution to matrix related qs we usually use dfs 
+3. The total degree of the graph is equal to twice the number of edges
+4. The path that you are writing the adjacant nodes must have edge between them
+5. Degree for undirected graph is the number of edges attached to it. the total degree of the graph is 2*Edges for undirected graph. Because every edges is associated to two nodes
+6. Directed Graphs:
+    i. Indegree -> the number of incoming edges
+    ii. Outdegree -> the number of outgoing edges
+7.Ways to store in unweighted graph
+    i. matrix -> 1 for edge, 0 for no edge, n*n space,it is costly
+    ii. list ->  1 based index graph. Create an array of n+1 size where n is the number of nodes 
+    vector<int> adjList[n+1] -> this is every index contains an vector of type int
+8. when we write int list[n+1], then the ith index contains an integer,the type of list that we want to create depends on the dataype
+9. Ways to store in Weighted graph
+    i. matrix : instead of writing 1 or 0 we write weight there
+    ii. list :  we make pair of the neighnouring vertex and weight associated with that neighbouring vertex
+    vector<pair<int,int>> adjList[n+1]
+10. BFS
+    Time Complexity : O(V+2E)
+    Space Complexity : O(2N)
+11. Shortest path in terms of edges then use bfs
+
+SPANNING TREE 
+A graph consisting of n nodes and n-1 edges and all nodes should be reachable from each other
+
+MINIMUM SPANNING TREE
+Any tree which has minmum sum is called as MST
+
+DISJOINT SET UNION DS
+If we have 2 connected components in graphs 
+    i. 1 consists of nodes 1,2,3,4
+    ii. other consists of nodes 5,6,7
+now if we want to know wheter 1 and 5 belong to same component or not we have to perform dfs/bfs traversal which will take O(V+E) Time Complexity
+
+Disjoint set does it in constant time complexity
+
+DYNAMIC GRAPH
+Graphs that keep on changing their configuration are called as dynamic graphs
+the graphs whose structure changes after every step
+COnsider you have given nodes 
+1,2,3,4,5,6,7
+Initailly these nodes are individual nodes and you have to join these nodes so you will use join to join these nodes
+with nodes you will dyanmically be given a list of edges
+(1,2) 
+(2,3)
+(4,5)
+(6,7)
+(5,6)
+(3,7)
+And now to start joining these edges 
+after (6,7) is joined you were asked whether 4 and 1 belong to same set or not.so your ans will  be no. but after completing all the steps 4 and 1 will belong to same components this will that graph changes at each step hence we say it dynamic graph
+
+UNION PSUEDO CODE
+Union(u,v) by rank
+1. Find ultimate parent of u and v
+2. Find rank of ultimate parents
+3. Connect smaller ranks to larger rank always
+4. If u and v have equal rank that is both are at same level then we will make either of both as parent and then increase the rank of the parent node, that is if we make u as parent then we will increase rank of u as it will be one level up in heirarchy 
+5.When you create the rank graph it will take logn time complexity
+6. hence we do path compression 
+7. suppose we have graph something like 4->6->7, and now we have to figure out whether 4 is parent of 7 or not, beacuse in parent's array we have 6 stored as parent of 7, hence we write the findParent function, which is recursive function, that is in parents array 4 is stored as parent of 4 beacuse it is at the topmost in heirarchy, then 4 is  stored as parent of 6 and 6 is stored as parent of 7, hence this function by doing recursive calls will find whether the ultimate parent of 7 is 4 or not and hence wewrite findParent function and its complexity is O(logn).
+8. Hence we write path compression, that once we determine that parent of 7 is 4 we update the parent's array and write parent of 4 as 7.
+O(4*alpha) , alpha is constant
+9. Why connect smaller to larger, because consider taht you have to connect two components where theheight of one component is 2 and other component is 4, then if we connect componenet of height 4 to 2, then the height of component 2 will increase which will increase complexity, that is it will atke longer distance, hence we connect smaller to larger.
+
+
+https://www.codingninjas.com/codestudio/library/0-1-bfs

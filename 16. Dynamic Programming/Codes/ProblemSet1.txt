@@ -1,0 +1,29 @@
+FOR SOLVING RECURSIVE QUESTIONS KEEP THREE THINGS IN MIND
+1. Write base condition
+2. Draw choice daigram
+3. Make input small
+
+for choice problems 
+That is if you are given an array then you have a choice whether to include that element then such problems are solved by this method
+
+if you are given a weights array 
+    if wt[i] < 0 -> it may be included
+                 -> may notbe included
+    else if it greater than wt[i], then it may not be included
+
+1. 0/1 knapsack
+https://practice.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1
+
+2. Subset Sum Equal to k
+https://www.codingninjas.com/codestudio/problems/subset-sum-equal-to-k_1550954?leftPanelTab=1
+
+3. Equal Sum Partition
+https://www.codingninjas.com/codestudio/problems/partition-equal-subset-sum_892980
+
+4. Minimum Subset Sum Difference
+https://www.codingninjas.com/codestudio/problems/partition-a-set-into-two-subsets-such-that-the-difference-of-subset-sums-is-minimum_842494?source=youtube&campaign=striver_dp_videos&utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_dp_videos
+
+5. Target Sum
+https://leetcode.com/problems/target-sum/description/
+
+6. For count write + instead of or

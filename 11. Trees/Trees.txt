@@ -1,0 +1,6 @@
+1. QS with edges
+https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/description/
+https://leetcode.com/problems/trim-a-binary-search-tree/description/
+https://leetcode.com/problems/most-frequent-subtree-sum/description/
+https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree/
+https://leetcode.com/problems/longest-path-with-different-adjacent-characters/
