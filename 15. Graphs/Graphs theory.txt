@@ -18,7 +18,7 @@ where as dfs algorithm moves in depth and hence when we have to find solution to
     ii. list :  we make pair of the neighnouring vertex and weight associated with that neighbouring vertex
     vector<pair<int,int>> adjList[n+1]
 10. BFS
-    Time Complexity : O(V+2E)
+    Time Complexity : O(V+2E) E=V^2
     Space Complexity : O(2N)
 11. Shortest path in terms of edges then use bfs
 
@@ -58,6 +58,7 @@ Union(u,v) by rank
 2. Find rank of ultimate parents
 3. Connect smaller ranks to larger rank always
 4. If u and v have equal rank that is both are at same level then we will make either of both as parent and then increase the rank of the parent node, that is if we make u as parent then we will increase rank of u as it will be one level up in heirarchy 
+
 5.When you create the rank graph it will take logn time complexity
 6. hence we do path compression 
 7. suppose we have graph something like 4->6->7, and now we have to figure out whether 4 is parent of 7 or not, beacuse in parent's array we have 6 stored as parent of 7, hence we write the findParent function, which is recursive function, that is in parents array 4 is stored as parent of 4 beacuse it is at the topmost in heirarchy, then 4 is  stored as parent of 6 and 6 is stored as parent of 7, hence this function by doing recursive calls will find whether the ultimate parent of 7 is 4 or not and hence wewrite findParent function and its complexity is O(logn).

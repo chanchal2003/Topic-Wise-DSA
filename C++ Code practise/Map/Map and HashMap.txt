@@ -1,0 +1,3 @@
+1. map uses a red-black tree as the data structure, so the elements you put in there are sorted, and insert/delete is O(log(n)). 
+2. hashmap uses a hash, so elements are unsorted, insert/delete is O(1).
+3. map is a red-black tree, O(log(n)) access time. hash_map (which is not standard, however unordered_map will become standard) uses (conceptually) a hash of the key as an index in an array of linked lists, and therefore has a best-case access time of O(1) and a worst case of O(n).

@@ -1,0 +1,22 @@
+1. Storage
+when we store int x = 57,it gets converted to binary form and then it is stored in memory and when it is retirved again it id converted to binary format 
+
+2. numbber of bits of datatypes
+byte -> 8 bits
+short -> 16 bits
+int -> 32 bits
+long ->  64 bits
+
+3. Range
+(refer 0 to 15 representation in binary format)
+in integers we have negative and positive numbers and how do we represent neagtive numbers 
+if we consider the MSB torepresent negative numbers we get positive and negative 0, which is wrong and hence we cannot use this approach
+Hence we find 2's complement to store negative numbers
+
+4. Interconversion
+i. Binary to decimal
+    a.  first check the MSB, if MSB is 0 then it is positive directly convert it
+    b. if it is 1 then, find 2's complement, add negative sign and then retrun it
+ii. Decimal to binary 
+    a. positive then directly convert it
+    b. negative -> ignore the sign -> convert to binary and the find 2's complement
